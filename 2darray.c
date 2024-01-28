@@ -19,7 +19,7 @@ void main(){
     printStar();
     printf("\n Here we will play and see 10 problem and it's solution\n");
     int howManyProb,prblmNum;
-    printf("How many problem do you want to see ? : ");
+    printf("How many problem do you want to solve ? : ");
     scanf("%d",&howManyProb);
       if (howManyProb >10)
         {
@@ -39,9 +39,6 @@ void main(){
         problemSet(prblmNum);
         
     }
-    
-
-
 }
 void printStar(){
 
@@ -90,7 +87,7 @@ void problemSet(int prblmNum){
 }
 
 int problem7(){
-  printf("Enter The 2 size of your 2D array :");
+  printf("\n Enter The 2 size of your 2D array :\n");
     int size1,size2;
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
@@ -98,7 +95,8 @@ int problem7(){
     {
       for (int j = 0; j < size2; j++)
       {
-        scanf("%d",array[i][j]);
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
       }
     }
     int evenFrequency =0;
