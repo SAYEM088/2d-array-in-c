@@ -57,6 +57,7 @@ void problemSet(int prblmNum){
     break;
   case 2:
     printf("Problem 2: Transpose a Matrix\n");
+    problem2();
     break;
   case 3:
     printf("Problem 3: Lower Diagonal Matrix\n");
@@ -97,6 +98,7 @@ int problem7(){
       {
         printf("Enter element [%d,%d] : ",i+1,j+1);
         scanf("%d",& array[i][j]);
+        // scanf("%d", *(array+i)j); it's a pointer notaion. and &* cancel each other.
       }
     }
     int evenFrequency =0;
@@ -115,29 +117,129 @@ int problem7(){
     
 }
 int problem2(){
-
+  printf("\n Enter The 2 size of your 2D array :\n");
+    int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("%d ",array[j][i]);
+      }
+      printf("\n");
+    }
 }
 int problem3(){
-
+  int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
+  
 }
 int problem4(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem5(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem6(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem1(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem8(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem9(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
 int problem10(){
-
+int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        printf("Enter element [%d,%d] : ",i+1,j+1);
+        scanf("%d",& array[i][j]);
+      }
+    }
 }
