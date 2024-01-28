@@ -37,10 +37,10 @@ void main(){
           return ;
         }
         problemSet(prblmNum);
+        
     }
     
-    int size;
-    int array[size];
+
 
 }
 void printStar(){
@@ -74,7 +74,8 @@ void problemSet(int prblmNum){
     printf("Problem 6: Trace Of Matrix\n");
     break;
   case 7:
-    printf("Problem 7:(frequency) Find total Even Number\n");
+  printf("Problem 7: (frequency) total Even number in matrix");
+   problem7();
     break;
   case 8:
     printf("Problem 8:check an identity matrix\n");
@@ -87,8 +88,33 @@ void problemSet(int prblmNum){
     break;
 }
 }
-int problem1(){
 
+int problem7(){
+  printf("Enter The 2 size of your 2D array :");
+    int size1,size2;
+    scanf("%d %d",&size1,&size2);
+    int array[size1][size2];
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        scanf("%d",array[i][j]);
+      }
+    }
+    int evenFrequency =0;
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        if (array[i][j]%2==0)
+        {
+          evenFrequency++;
+        }
+        
+      }
+    }
+    printf("Total Even Number is : %d ",evenFrequency);
+    
 }
 int problem2(){
 
@@ -105,7 +131,7 @@ int problem5(){
 int problem6(){
 
 }
-int problem7(){
+int problem1(){
 
 }
 int problem8(){
