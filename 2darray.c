@@ -15,8 +15,8 @@ int problem10();
 void main(){
     // Heading
     printStar();
-    printf("    2D Array    ");
-    printStar();
+    
+    
     printf("\n Here we will play and see 10 problem and it's solution\n");
     int howManyProb,prblmNum;
     printf("How many problem do you want to solve ? : ");
@@ -41,11 +41,20 @@ void main(){
     }
 }
 void printStar(){
+     int rows = 5;
+    int cols = 10;
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <=cols; j++) {
+            if (i == 1 || i == rows || j == 1 || j == cols) {
+                printf("* ");
+            } else if (i == 3 && j >= 3 && j <= 8) {
 
-    char star = '*';
-    for (int i = 0; i < 8; i++)
-    {
-        printf(" %c ",star);
+                printf("%c ", "2d ARR"[j - 3]);
+            } else {
+                printf("  ");
+            }
+        }
+        printf("\n");
     }
 }
 
