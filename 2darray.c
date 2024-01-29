@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 void printStar();
 void problemSet(int prblmNum);
 int problem1();
@@ -17,7 +16,7 @@ void main(){
     printStar();
     
     
-    printf("\n Here we will play and see 10 problem and it's solution\n");
+    printf("\n Here We will play and see 10 problem and it's solution\n");
     int howManyProb,prblmNum;
     printf("How many problem do you want to solve ? : ");
     scanf("%d",&howManyProb);
@@ -29,7 +28,7 @@ void main(){
     printf("\n");
     for (int hmp = 0; hmp < howManyProb; hmp++)
     {
-        printf(" Enter a Problem Number (1-10) : ");
+        printf("Enter a Problem Number (1-10) : ");
         scanf("%d",&prblmNum);
           if (prblmNum >10)
         {
