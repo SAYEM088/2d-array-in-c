@@ -61,7 +61,7 @@ void printStar(){
 void problemSet(int prblmNum){
     switch (prblmNum) {
   case 1:
-    printf("Problem 1: sum and subtraction of two matrices\n");
+    printf("Problem 1: sum and product of two matrices\n");
     break;
   case 2:
     printf("Problem 2: Transpose a Matrix\n");
@@ -211,6 +211,17 @@ int size1,size2;
         scanf("%d",& array[i][j]);
       }
     }
+    int sum = 0;
+    int product =0;
+    for (int i = 0; i < size1; i++)
+    {
+      for (int j = 0; j < size2; j++)
+      {
+        sum +=array[i][j];
+        product *=array[i][j];
+      }
+    }
+    printf("Sum is %d \n Product is %d",sum,product);
 }
 int problem8(){
 int size1,size2;
