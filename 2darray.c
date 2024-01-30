@@ -253,6 +253,10 @@ int problem5(int size1, int size2, int array[][size2])
 }
 int problem6(int size1, int size2, int array[][size2])
 {
+  int trace =0;
+  for (int i = 0; i < size2; ++i)
+        trace = trace + array[i][i];
+        printf(" Trace of your matrix is %d\n",trace);
 }
 int problem7(int size1, int size2, int array[][size2])
 {
@@ -272,6 +276,23 @@ int problem7(int size1, int size2, int array[][size2])
 }
 int problem8(int size1, int size2, int array[][size2])
 {
+  int col1,col2;
+  printf("Enter two column numbers to be exchanged:");
+    scanf("%d %d", &col1, &col2);
+
+    for (int i = 0; i < size2; ++i) {
+       int temp = array[i][col1 - 1];
+        array[i][col1 - 1] = array[i][col2 - 1];
+        array[i][col2 - 1] = temp;
+    }
+
+    printf("Matrix after column exchange:\n");
+    for (int i = 0; i < size1; ++i) {
+        for (int j = 0; j < size2; ++j)
+            printf(" %d", array[i][j]);
+        printf("\n");
+    }
+
 }
 int problem9(int size1, int size2, int array[][size2])
 {
