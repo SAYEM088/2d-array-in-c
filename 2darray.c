@@ -61,7 +61,8 @@ void printStar(){
 void problemSet(int prblmNum){
     switch (prblmNum) {
   case 1:
-    printf("Problem 1: sum and product of two matrices\n");
+    printf("Problem 1: sum and product of all elements\n");
+    problem1();
     break;
   case 2:
     printf("Problem 2: Transpose a Matrix\n");
@@ -69,6 +70,7 @@ void problemSet(int prblmNum){
     break;
   case 3:
     printf("Problem 3: Lower Diagonal Matrix\n");
+    problem3();
     break;
   case 4:
     printf("Problem 4:(Sorting) Row element Ascending Order\n");
@@ -80,23 +82,24 @@ void problemSet(int prblmNum){
     printf("Problem 6: Trace Of Matrix\n");
     break;
   case 7:
-  printf("Problem 7: (frequency) total Even number in matrix");
+  printf("Problem 7: (frequency) total Even number in matrix\n");
    problem7();
     break;
   case 8:
-    printf("Problem 8:check an identity matrix\n");
+    printf("Problem 8:Interchange the rows\n");
     break;
   case 9:
-    printf("Problem 8:check an identity matrix\n");
+    printf("Problem 9:Spiral Matrix\n");
     break;
   case 10:
-    printf("Problem 8:check an identity matrix\n");
+    printf("Problem 10:Print diagonals\n");
+    problem10();
     break;
 }
 }
 
 int problem7(){
-  printf("\n Enter The 2 size of your 2D array :\n");
+  printf("\n Enter The 2 size of your 2D array : ");
     int size1,size2;
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
@@ -125,7 +128,7 @@ int problem7(){
     
 }
 int problem2(){
-  printf("\n Enter The 2 size of your 2D array :\n");
+  printf("\n Enter The 2 size of your 2D array : ");
     int size1,size2;
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
@@ -148,6 +151,7 @@ int problem2(){
 }
 int problem3(){
   int size1,size2;
+  printf("\nEnter the size of the Array : ");
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
     for (int i = 0; i < size1; i++)
@@ -158,10 +162,25 @@ int problem3(){
         scanf("%d",& array[i][j]);
       }
     }
+    for(int i=0; i<size1; i++) {
+		for(int j=0; j<size2; j++) {
+			if(i>=j){
+        printf("%d ", array[i][j]);
+      }
+				
+			else
+				{
+          printf("%d ", 0);
+        }
+		}
+		printf("\n");
+	}
+
   
 }
 int problem4(){
 int size1,size2;
+printf("\nEnter the size of the Array : ");
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
     for (int i = 0; i < size1; i++)
@@ -212,7 +231,7 @@ int size1,size2;
       }
     }
     int sum = 0;
-    int product =0;
+    int product =1;
     for (int i = 0; i < size1; i++)
     {
       for (int j = 0; j < size2; j++)
@@ -251,6 +270,7 @@ int size1,size2;
 }
 int problem10(){
 int size1,size2;
+printf("\nEnter the size of the Array : ");
     scanf("%d %d",&size1,&size2);
     int array[size1][size2];
     for (int i = 0; i < size1; i++)
@@ -260,5 +280,25 @@ int size1,size2;
         printf("Enter element [%d,%d] : ",i+1,j+1);
         scanf("%d",& array[i][j]);
       }
+    }
+     if(size1==size2)
+    {
+          
+            for(int i=0;i< size1;i++)
+            {
+                for(int j=0;j< size2;j++)
+                {
+ 
+                    if(i==j)
+                        printf("%d\t",array[j][i]);    
+                    else
+                        printf("\t");   
+                }
+                printf("\n");     
+            }
+    }
+    else
+    {
+        printf("\nMatrix is not a Square Matrix.");
     }
 }
