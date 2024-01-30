@@ -103,7 +103,7 @@ void problemSet(int prblmNum)
     takeArray(8);
     break;
   case 9:
-    printf("Problem 9:Spiral Matrix\n");
+    printf("Problem 9:Spiral Matrix-medium\n");
     takeArray(9);
     break;
   case 10:
@@ -296,6 +296,38 @@ int problem8(int size1, int size2, int array[][size2])
 }
 int problem9(int size1, int size2, int array[][size2])
 {
+  int top=0,bottom=size1-1,left=0,right=size2-1;
+  while (top<=bottom && left<=right)
+  {
+    for (int i = left; i <=right; i++)
+    {
+      printf("%d",array[top][i]);
+    }
+    top++;
+    for (int j = top; j <=bottom ; j++)
+    {
+      printf("%d",array[j][right]);
+    }
+    right--;
+    if (top<=bottom)
+    {
+      for(int k=right;k>=left;k--){
+         printf("%d",array[bottom][k]);
+      }
+      bottom--;
+    }
+    if (left<=right)
+    {
+      for (int n = bottom; n >=top ; n--)
+      {
+        printf("%d",array[n][left]);
+      }
+      left++;
+    }
+    
+  }
+  printf("\nproblem ref: leetcode(medium)\n");
+
 }
 int problem10(int size1, int size2, int array[][size2])
 {
